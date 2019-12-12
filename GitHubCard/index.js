@@ -43,7 +43,9 @@ function GitCard(imgSrc, usersName, uName, loc, gitUrl, fsCount, fingCount, bio)
     return newCard
 }
 
+
 const cards = document.querySelector('.cards');
+
 
 function axiosCard(cardApiUrl) {
     axios.get(cardApiUrl)
@@ -65,7 +67,9 @@ function axiosCard(cardApiUrl) {
         });
 }
 
+
 axiosCard('https://api.github.com/users/cjstryker');
+
 
 axios.get('https://api.github.com/users/cjstryker/followers').then(res => {
     console.log(res);
